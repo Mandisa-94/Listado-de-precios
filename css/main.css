@@ -5,6 +5,12 @@
           box-sizing: border-box;
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-color: aqua;
+  }
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,6 +19,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: 'Open Sans';
+}
+
+.toolsbar {
+  display: none;
 }
 
 .container {

@@ -3,12 +3,20 @@
     margin: 0;
     box-sizing: border-box
 }
+
 @import './variants';
+@import './mobile';
+
 
 body {
     display: flex;
     justify-content: center;
     font-family: 'Open Sans';
+}
+
+//HEADER MOBILE
+.toolsbar{
+    display: none;
 }
 
 // COMIENZO - ENCABEZADO
@@ -405,3 +413,6 @@ margin-bottom: 23px;
 // FIN GRID
 
 //---------------------------------------------------------//
+
+
+
