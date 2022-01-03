@@ -1,0 +1,202 @@
+doctype html 
+
+html 
+    head
+        link(rel="stylesheet", href="../css/main.css") 
+        link(rel="stylesheet", href="https://2.cdn.wisboo.com/fonts/icons-wisboo/style.css")
+    body
+        header    
+        main 
+            - const exportIcono = ["icon-file_download---material", "eadd"]
+            - const moneyIcono = ["icon-attach_money---material", "ea2b"]
+            - const buscarIcono = ["icon-Buscar", "e939"]
+            - const dateIcono = ["icon-Date", "e90c"]
+            - const flechaUpIcono = ["icon-Flecha-Single-Up", "e92e"]
+            - const flechaDownIcono = ["icon-Flecha-Single-Down", "e92a"]
+            - const menuIcon = ["icon-Menu-Tres-Puntos", "e96b"]
+
+            style. 
+                .grid__data--file6--estado {
+                    background-image: linear-gradient(0deg, rgba(255, 69, 92, 0.4), rgba(255, 69, 92, 0.4));
+                }
+            style. 
+                .grid__data--file4--estado {
+                    background-color: #ECEEF1
+                }    
+            style. 
+                .grid__data--file1--estado, 
+                .grid__data--file2--estado {
+                    background-image: linear-gradient(0deg, rgba(4, 178, 243, 0.3), rgba(4, 178, 243, 0.3));
+                }
+            style. 
+                .grid__data--file3--estado, 
+                .grid__data--file5--estado,
+                .grid__data--file7--estado,
+                .grid__data--file8--estado,
+                .grid__data--file9--estado {
+                    background-image: linear-gradient(0deg, rgba(23, 230, 138, 0.3), rgba(23, 230, 138, 0.3));
+                }
+
+            section.container
+                    .container-head 
+                            h1.container-head__title Ventas de la academia
+                            .container-head__buttons
+                                button.container-head__buttons--exportar
+                                    i(class = exportIcono) 
+                                    span EXPORTAR  
+                                button.container-head__buttons--registrar REGISTRAR UNA VENTA 
+                    article.boxes 
+                        .boxes__box1
+                            h2 Cant Ventas
+                            p.boxes__box1--value 322
+                            p.boxes__box1--period Últimos 60 días  
+                        .boxes__box2
+                            h2 Recaudo (MXN)
+                            .boxes__box2--value
+                                i(class = moneyIcono)(style ="margin-right: 17.2px; color: #000000")
+                                span 77322 MXN 
+                            p.boxes__box2--period 04/10/2020 - 04/12/2020 
+                        .boxes__box3 
+                            h2 Recaudo (USD)
+                            .boxes__box3--value
+                                i(class = moneyIcono)(style ="margin-right: 17.2px; color: #000000")
+                                span 10420 USD
+                            p.boxes__box3--period Todos los tiempos
+                        .boxes__box4 
+                            h2 Recaudo (ARS)
+                            .boxes__box4--value
+                                i(class = moneyIcono)(style ="margin-right: 17.2px; color: #000000")
+                                span 257000 ARS
+                            p.boxes__box4--period 04/10/2020 - 04/12/2020
+                    article.grid
+                        .grid__searched
+                            .grid__searched--text 
+                                input.grid__searched--text--lupa(type="text", placeholder = "Buscar por #orden o comprador")
+                                i(class = buscarIcono) 
+                            .grid__searched--curso
+                                select
+                                    option(value="curso") Curso     
+                            .grid__searched--estado
+                                select
+                                    option(value="estado") Estado
+                            .grid__searched--moneda
+                                select
+                                    option(value="moneda") Medio de pago 
+                            .grid__searched--date 
+                                input(type="date" value="04/10/2020")
+                                .grid__searched--date--icon
+                                    i(class = dateIcono)
+                        .grid__categories 
+                            .grid__categories--orden
+                                p # Orden
+                                .grid__categories--orden--iconos
+                                    i(class= flechaUpIcono)(style= "margin-bottom: 1.26px") 
+                                    i(class = flechaDownIcono)(style= "margin-top: 1.26px")
+                            .grid__categories--curso
+                                p # Curso
+                                .grid__categories--orden--iconos
+                                    i(class= flechaUpIcono)(style= "margin-bottom: 1.26px") 
+                                    i(class = flechaDownIcono)(style= "margin-top: 1.26px")
+                            .grid__categories--comprador
+                                p Comprador
+                                .grid__categories--orden--iconos
+                                    i(class= flechaUpIcono)(style= "margin-bottom: 1.26px") 
+                                    i(class = flechaDownIcono)(style= "margin-top: 1.26px")
+                            .grid__categories--fecha
+                                p Fecha
+                                .grid__categories--orden--iconos
+                                    i(class= flechaUpIcono)(style= "margin-bottom: 1.26px") 
+                                    i(class = flechaDownIcono)(style= "margin-top: 1.26px")
+                            .grid__categories--estado
+                                p Estado
+                                .grid__categories--orden--iconos
+                                    i(class= flechaUpIcono)(style= "margin-bottom: 1.26px") 
+                                    i(class = flechaDownIcono)(style= "margin-top: 1.26px")
+                            .grid__categories--ganancias
+                                p Ganancias
+                                .grid__categories--orden--iconos
+                                    i(class= flechaUpIcono)(style= "margin-bottom: 1.26px") 
+                                    i(class = flechaDownIcono)(style= "margin-top: 1.26px")
+                        .grid__data 
+                            .grid__data--file1 
+                                p.grid__data--file1--number 10063-0021
+                                p.grid__data--file1--curso Baby Monitor Technology
+                                p.grid__data--file1--comprador Aaron Almaraz
+                                p.grid__data--file1--fecha 19 Dec 2020
+                                p.grid__data--file1--estado Comprobante
+                                p.grid__data--file1--ganancia USD $50
+                                .grid__data--file1--menu 
+                                    i(class= menuIcon) 
+                            .grid__data--file2 
+                                p.grid__data--file2--number 88043-2371
+                                p.grid__data--file2--curso Can You Get Free Games…
+                                p.grid__data--file2--comprador Ainara Vergara
+                                p.grid__data--file2--fecha 15 Aug 2020
+                                p.grid__data--file2--estado Comprobante
+                                p.grid__data--file2--ganancia USD $130.1
+                                .grid__data--file2--menu 
+                                    i(class= menuIcon) 
+                            .grid__data--file3 
+                                p.grid__data--file3--number 97411-4998 
+                                p.grid__data--file3--curso How Plasma Tvs And Lcd Tvs Differ
+                                p.grid__data--file3--comprador Bansilal Brata
+                                p.grid__data--file3--fecha 24 May 2020
+                                p.grid__data--file3--estado Pagada
+                                p.grid__data--file3--ganancia MXN $1000
+                                .grid__data--file3--menu 
+                                    i(class= menuIcon) 
+                            .grid__data--file4 
+                                p.grid__data--file4--number 70393-0959 
+                                p.grid__data--file4--curso Dealing With Technical Support 10 Useful Tips
+                                p.grid__data--file4--comprador Emilee Simchenko
+                                p.grid__data--file4--fecha 16 Dec 2020
+                                p.grid__data--file4--estado Pendiente
+                                p.grid__data--file4--ganancia USD $30
+                                .grid__data--file4--menu 
+                                    i(class= menuIcon) 
+                            .grid__data--file5 
+                                p.grid__data--file5--number 48929-4326
+                                p.grid__data--file5--curso Mg Shadow Computer Monitoring Software...
+                                p.grid__data--file5--comprador Emmy Elsner
+                                p.grid__data--file5--fecha 06 Feb 2020
+                                p.grid__data--file5--estado Pagada
+                                p.grid__data--file5--ganancia USD $38
+                                .grid__data--file5--menu 
+                                    i(class= menuIcon) 
+                            .grid__data--file6 
+                                p.grid__data--file6--number 94021-7221
+                                p.grid__data--file6--curso A Pocket Pc Is Portability At It S Best
+                                p.grid__data--file6--comprador Enyinnaya Chinedu
+                                p.grid__data--file6--fecha 02 Dec 2020
+                                p.grid__data--file6--estado Rechazada
+                                p.grid__data--file6--ganancia USD $32
+                                .grid__data--file6--menu 
+                                    i(class= menuIcon) 
+                            .grid__data--file7 
+                                p.grid__data--file7--number 42680-1026
+                                p.grid__data--file7--curso Not All Blank Cassettes Are Created Equal
+                                p.grid__data--file7--comprador Heather Clark
+                                p.grid__data--file7--fecha 26 Oct 2020
+                                p.grid__data--file7--estado Pagada
+                                p.grid__data--file7--ganancia USD $100
+                                .grid__data--file7--menu 
+                                    i(class= menuIcon) 
+                            .grid__data--file8 
+                                p.grid__data--file8--number 87866-4111
+                                p.grid__data--file8--curso V7 Digital Photo Printing
+                                p.grid__data--file8--comprador Noori El Mansur
+                                p.grid__data--file8--fecha 18 Jun 2020
+                                p.grid__data--file8--estado Pagada
+                                p.grid__data--file8--ganancia USD $100
+                                .grid__data--file8--menu 
+                                    i(class= menuIcon) 
+                            .grid__data--file9 
+                                p.grid__data--file9--number 18742-8221
+                                p.grid__data--file9--curso Anonymous Proxy
+                                p.grid__data--file9--comprador Praskovya Dubinina
+                                p.grid__data--file9--fecha 30 Mar 2020
+                                p.grid__data--file9--estado Pagada
+                                p.grid__data--file9--ganancia USD $100
+                                .grid__data--file9--menu 
+                                    i(class= menuIcon)      
+    footer 
