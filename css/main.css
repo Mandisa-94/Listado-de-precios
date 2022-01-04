@@ -527,14 +527,20 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
-    background-color: #0004ff;
+  .grid {
+    background-color: blue;
+  }
+  .grid__categories {
+    background-color: #c71313;
   }
 }
 
 @media (max-width: 320px) {
-  body {
-    background-color: red;
+  .grid {
+    background-color: rgba(255, 0, 0, 0.89);
+  }
+  .container {
+    background-color: blue;
   }
 }
 /*# sourceMappingURL=main.css.map */
