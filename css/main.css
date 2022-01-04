@@ -709,7 +709,7 @@ body {
   }
   .grid__searched--date input {
     width: 90%;
-    margin-left: 2px;
+    margin-left: 7%;
     margin-right: 0px;
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -945,6 +945,7 @@ body {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
+    margin-left: 7%;
   }
   .grid__categories, .grid__data {
     display: none;
@@ -1652,6 +1653,7 @@ body {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
+    margin-left: 6%;
   }
   .container .grid__categories, .container .grid__data {
     display: none;

@@ -564,7 +564,8 @@
                                     width: 90%;
                                     margin-left: 2px;
                                     margin-right: 0px;
-                                    @include inputReset()
+                                    @include inputReset();
+                                    margin-left: 6%;
                                 }            
                         }
                     

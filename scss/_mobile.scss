@@ -110,7 +110,7 @@
                         margin-top: 5%;
                             input{
                                 width: 90%;
-                                margin-left: 2px;
+                                margin-left: 7%;
                                 margin-right: 0px;
                                 @include inputReset()
                             }            
@@ -265,7 +265,8 @@
                                 width: 90%;
                                 margin-left: 2px;
                                 margin-right: 0px;
-                                @include inputReset()
+                                @include inputReset();
+                                margin-left: 7%;
                             }            
                     }
                 
