@@ -308,6 +308,7 @@ body {
   border: none;
   color: #697284;
   font-family: 'Open Sans';
+  background-color: #ffff;
 }
 
 .grid__searched--date {
@@ -338,6 +339,7 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  background-color: #ffff;
 }
 
 .grid__searched--date input::-webkit-calendar-picker-indicator {
@@ -1018,7 +1020,7 @@ body {
   }
 }
 
-@media (min-width: 990px) and (max-width: 1023px) {
+@media (min-width: 990px) and (max-width: 1024px) {
   body, main {
     width: 100%;
     display: -webkit-box;

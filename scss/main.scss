@@ -161,6 +161,7 @@ margin-bottom: 23px;
                             border: none;
                             color: $text-color;
                             font-family: 'Open Sans';
+                            background-color: $primary-color;
                         }
                 }
                 &--date{
@@ -178,7 +179,8 @@ margin-bottom: 23px;
                             font-family: 'Open Sans' !important;
                             margin-left: 13px;
                             margin-right: 8px;
-                            @include inputReset()
+                            @include inputReset();
+                            background-color: $primary-color;
                         }
                         input::-webkit-calendar-picker-indicator {
                             display: none;
