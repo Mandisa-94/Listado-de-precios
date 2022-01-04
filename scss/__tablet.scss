@@ -1,6 +1,6 @@
 //VISTA TABLET
 
-@media (min-width: 990px) and (max-width: 1024px){
+@media (min-width: 990px) and (max-width: 1023px){
     body, main{
         width: 100%;
         @include flex-center();

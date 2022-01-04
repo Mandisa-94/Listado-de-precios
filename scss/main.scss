@@ -14,6 +14,15 @@ body {
     font-family: 'Open Sans';
 }
 
+.mobile__export{
+    display: none
+}
+
+.mobile__searched{
+    display: none;
+}
+
+
 // COMIENZO - ENCABEZADO
 .container {
     width: 1280px;
@@ -91,9 +100,7 @@ margin-bottom: 23px;
 
 //---------------------------------------------------------//
 
-.mobile__searched{
-    display: none;
-}
+
 
 //COMIENZO GRID
 
@@ -303,9 +310,7 @@ margin-bottom: 23px;
         }
 }
 
-.mobile__export{
-    display: none
-}
+
 
 // FIN GRID
 
