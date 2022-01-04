@@ -16,8 +16,10 @@ $bg-chip-color-rechazada: linear-gradient(0deg, rgba(255, 69, 92, 0.4), rgba(255
 $divisor-color: #B3BAC9;
 $outline-text-color: #D4D8E1;
 
-@mixin iphone {
-    @media screen and (min-width: 320px) and (max-width: 480px) {
-        @content;
-    }
-} 
+$s: 320px;
+
+// @mixin iphone {
+//     @media screen and (min-width: 320px) and (max-width: 480px) {
+//         @content;
+//     }
+// } 
