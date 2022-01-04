@@ -1,13 +1,311 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//VISTA MOVILE
+
+@media (min-width: 280px) and (max-width: 319px){
+    body, main{
+        width: 100vw;
+        @include flex-center();
+    }
+
+    //ENCABEZADO
+
+    .container{
+        width: 100%;
+        height: auto;
+        @include flex-center();
+    }
+    .container-head {
+        width: 100%;
+        flex-direction: column;
+        border-bottom: none;
+            &__title{
+                width: 100%;
+                height: 80px;
+                text-align: center;
+                border-bottom: solid 1px $divisor-color; 
+                @include flex-center();
+            }
+            &__buttons{
+                width: 100%;
+                justify-content: center;
+                margin: 5% 0 0% 0;
+               
+                    &--exportar{
+                       display: none;
+                    }
+                    &--registrar{
+                        width: 180px;
+                        height: 36px;
+                        font-size: 12px;
+                    }
+            }
+           
+    }
+
+    //BOXES
 
 
-// body{
-//     @include iphone (){
-//         background-color: aqua;
-//     }
-// }
+    .boxes{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    @include flex-center();
+        &__box1, &__box2, &__box3, &__box4{
+            width: 170px;
+            height: auto;
+            margin-top: 2%;
+            i{
+                width: 10px;
+                height: auto;
+            }
+            &--value{
+               font-size: 15px;
+            }
+            &--period{
+                font-size: 11px;
+            }
+        }
+        &__box2 {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+        &__box3 {
+            margin-right: 0px;
+        }
+    }
+    
+    // FILTROS
 
-// @media screen and (min-width: 320px) {
-//     body{
-//         background-color: red;
-//     }
-// }
+    .grid{
+        width: 90%;
+        height: auto;
+        @include flex-center();
+        margin-top: 5%;
+            &__searched{
+                flex-direction: column;
+                margin: 8% 0 8% 0;
+                @include flex-center();
+                    &--text{
+                        display: none; 
+                    }
+                    &--curso, &--estado, &--moneda {
+                        width: 80%;
+                            select{
+                                width: 90%;
+                            }
+                    }
+                    &--estado{
+                        margin: 5% 0 5% 0;
+                    }
+                    &--date{
+                        width: 80%;
+                        justify-content: initial;
+                        margin-top: 5%;
+                            input{
+                                width: 90%;
+                                margin-left: 2px;
+                                margin-right: 0px;
+                                @include inputReset()
+                            }            
+                    }
+                
+            }
+            &__categories, &__data{
+                display: none;
+            }
+    }
+
+    //TITULO Y TEXTO INFORMATIVO
+
+    .mobile__searched{
+        @include flex-center();
+        flex-direction: column;
+            &--title{
+                width: 100%;
+                height: 60px;
+                text-align: center;
+                font-size: 1.2rem;
+                color: $text-color;
+                @include flex-center();
+            }
+            &--text{
+                color: $text-color;
+                font-size: 1.2rem;
+            }
+    
+    }
+
+    // BOTON EXPORTAR
+
+    .mobile__export{
+        width: 100%;
+        @include flex-center();
+        margin: 5% 0 5% 0;
+            &--button{
+                @include button-export();
+                width: 180px;
+                height: 36px;
+                font-size: 12px;
+            }
+    }
+}
+
+// VISTA MOBILE 
+
+@media (min-width: 320px) and (max-width: 500px){
+    body, main{
+        width: 100vw;
+        @include flex-center();
+    }
+
+    //ENCABEZADO
+
+    .container{
+        width: 100%;
+        height: auto;
+        @include flex-center();
+    }
+    .container-head {
+        width: 100%;
+        flex-direction: column;
+        border-bottom: none;
+            &__title{
+                width: 100%;
+                height: 80px;
+                text-align: center;
+                border-bottom: solid 1px $divisor-color; 
+                @include flex-center();
+            }
+            &__buttons{
+                width: 100%;
+                justify-content: center;
+                margin: 5% 0 0% 0;
+               
+                    &--exportar{
+                       display: none;
+                    }
+                    &--registrar{
+                        width: 180px;
+                        height: 36px;
+                        font-size: 12px;
+                    }
+            }
+           
+    }
+
+    //BOXES
+
+
+    .boxes{
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    @include flex-center();
+        &__box1, &__box2, &__box3, &__box4{
+            width: 150px;
+            height: auto;
+            margin-top: 2%;
+            i{
+                width: 10px;
+                height: auto;
+            }
+            &--value{
+               font-size: 15px;
+            }
+            &--period{
+                font-size: 11px;
+            }
+        }
+        &__box2 {
+            margin-right: 0px;
+            margin-left: 2%;
+        }
+        &__box3 {
+            margin-right: 2%;
+        }
+    }
+    
+    // FILTROS
+
+    .grid{
+        width: 90%;
+        height: auto;
+        @include flex-center();
+        margin-top: 5%;
+            &__searched{
+                flex-direction: column;
+                margin: 8% 0 8% 0;
+                @include flex-center();
+                    &--text{
+                        display: none; 
+                    }
+                    &--curso, &--estado, &--moneda {
+                        width: 80%;
+                            select{
+                                width: 90%;
+                            }
+                    }
+                    &--estado{
+                        margin: 5% 0 5% 0;
+                    }
+                    &--date{
+                        width: 80%;
+                        justify-content: initial;
+                        margin-top: 5%;
+                            input{
+                                width: 90%;
+                                margin-left: 2px;
+                                margin-right: 0px;
+                                @include inputReset()
+                            }            
+                    }
+                
+            }
+            &__categories, &__data{
+                display: none;
+            }
+    }
+
+    //TITULO Y TEXTO INFORMATIVO
+
+    .mobile__searched{
+        @include flex-center();
+        flex-direction: column;
+            &--title{
+                width: 100%;
+                height: 60px;
+                text-align: center;
+                font-size: 1.2rem;
+                color: $text-color;
+                @include flex-center();
+            }
+            &--text{
+                color: $text-color;
+                font-size: 1.2rem;
+            }
+    
+    }
+
+    // BOTON EXPORTAR
+
+    .mobile__export{
+        width: 100%;
+        @include flex-center();
+        margin: 5% 0 5% 0;
+            &--button{
+                @include button-export();
+                width: 180px;
+                height: 36px;
+                font-size: 12px;
+            }
+    }
+}

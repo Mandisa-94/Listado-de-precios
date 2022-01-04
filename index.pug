@@ -2,14 +2,13 @@ doctype html
 
 html 
     head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/main.css") 
         link(rel="stylesheet", href="https://2.cdn.wisboo.com/fonts/icons-wisboo/style.css")
     body
         header
-            .toolsbar 
-                i 
-                h1 Ventas de la academia
-                i    
         main 
             - const exportIcono = ["icon-file_download---material", "eadd"]
             - const moneyIcono = ["icon-attach_money---material", "ea2b"]
@@ -69,9 +68,12 @@ html
                         .boxes__box4 
                             h2 Recaudo (ARS)
                             .boxes__box4--value
-                                i(class = moneyIcono)(style ="margin-right: 17.2px; color: #000000")
+                                i(class = moneyIcono style ="margin-right: 17.2px; color: #000000")
                                 span 257000 ARS
                             p.boxes__box4--period 04/10/2020 - 04/12/2020
+                    .mobile__searched 
+                        h2.mobile__searched--title Descargá tu informe 
+                        p.mobile__searched--text Selecciona tus preferencias
                     article.grid
                         .grid__searched
                             .grid__searched--text 
@@ -202,5 +204,9 @@ html
                                 p.grid__data--file9--estado Pagada
                                 p.grid__data--file9--ganancia USD $100
                                 .grid__data--file9--menu 
-                                    i(class= menuIcon)      
+                                    i(class= menuIcon) 
+                    .mobile__export 
+                        button.mobile__export--button
+                            i(class = exportIcono) 
+                            span EXPORTAR                
     footer 

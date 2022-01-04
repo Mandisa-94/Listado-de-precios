@@ -5,27 +5,20 @@
 }
 
 @import './variants';
+@import './mixins';
 
 
 
 body {
-    display: flex;
-    justify-content: center;
+    @include flex-center();
     font-family: 'Open Sans';
 }
-
-//HEADER MOBILE
-// .toolsbar{
-//     display: none;
-// }
 
 // COMIENZO - ENCABEZADO
 .container {
     width: 1280px;
     height: 1062px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     flex-direction: column;
     background-color: $bg-color;
 }
@@ -47,29 +40,10 @@ body {
             align-items: center;
             margin-bottom: 13px;
                 &--exportar{
-                    width: 114px;
-                    height: 36px;
-                    border-radius: 3px;
-                    border-style: none;
-                    background: $bg-color-exportar;
-                    border: 1px solid #D4D8E1;
-                    color: $text-color;
-                    font-size: 13px;
-                    line-height: 18px;
-                    font-weight: 600;
-                    margin-right: 13px;
-                    cursor: pointer;
+                    @include button-export()
                 }
                 &--registrar{
-                    width: 167px;
-                    height: 36px;
-                    border-radius: 4px;
-                    border-style: none;
-                    background: $bg-color-registrar-venta;
-                    color: $primary-color;
-                    font-size: 13px;
-                    line-height: 17,7px;
-                    cursor: pointer;
+                    @include button-register()
                 }
         }
        
@@ -81,57 +55,13 @@ body {
 
 //COMIENZO BOXES 
 
-@mixin box-title {
-    height: 20px;
-    width: auto;
-    color: $text-color;
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: 600px;
-    margin-left: 8.33%;
-    font-style: normal;
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-
-@mixin box-value {
-    height: 27px;
-    width: auto;
-    display: flex;
-    align-items: center;
-    color: $secondary-text-color;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 27px;
-    margin-left: 8.33%;
-    margin-top: 13px;
-    margin-bottom: 0px;
-}
-
-@mixin box-period {
-    height: 18px;
-    width: auto;
-    color: $caption-text-color;
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 600px;
-    margin-left: 8.33%;
-    margin-bottom: 20px;
-    margin-top: 3px;
-}
-
 .boxes{
 display: flex;
 width: 999px;
 margin-top: 22px;
 margin-bottom: 23px;
     &__box1, &__box2, &__box3, &__box4{
-        width: 240px;
-        height: 121px;
-        background-color: $primary-color;
-        border: 1px solid $outline-text-color;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        @include box ();
             h2{
                 @include box-title()
             }
@@ -161,24 +91,13 @@ margin-bottom: 23px;
 
 //---------------------------------------------------------//
 
+.mobile__searched{
+    display: none;
+}
+
 //COMIENZO GRID
 
 //FILTROS
-
-@mixin inputReset {
-    appearance: none;
-}
-@mixin placeholder {
-    position: absolute;
-    width: 239px;
-    color: $placeholder-text-color;
-    top: 8px;
-    left: 16px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    font-style: normal;
-}
 
 .grid {
     width: 999px;
@@ -225,8 +144,7 @@ margin-bottom: 23px;
                     height: 35px;
                     border-radius: 4px;
                     border: 1px solid $outline-text-color;
-                    display: flex;
-                    justify-content: center;
+                    @include flex-center();
                         select{
                             width: 140px;
                             font-weight: bold;
@@ -243,8 +161,7 @@ margin-bottom: 23px;
                     height: 34px;
                     border-radius: 4px;
                     border: 1px solid $outline-text-color;
-                    display: flex;
-                    justify-content: center;
+                    @include flex-center();
                         input{
                             border: none;
                             font-size: 13px !important;
@@ -262,9 +179,7 @@ margin-bottom: 23px;
                             &--icon{
                                 width: 44px;
                                 border-left: solid 1px $outline-text-color;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                                @include flex-center();
                             }
                                 i{
                                     width: 15px;
@@ -287,27 +202,13 @@ margin-bottom: 23px;
     margin-top: 34px;
     margin-bottom: 15px;
         &--orden, &--curso, &--comprador, &--fecha, &--estado, &--ganancias{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center();
             padding: 0;
                 p{
-                    font-size: 13px;
-                    font-weight: bold;
-                    line-height: 18px;
-                    color: $text-color;
-                    padding: 0;
-                    margin-block-end: 0;
+                    @include categories-p();
                 }
                 &--iconos{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    color: $text-color;
-                    font-size: 4px;
-                    margin-left: 4.81px;
-                    padding: 0;
+                    @include categories-i()
                 }
         }
         &--orden{
@@ -341,13 +242,7 @@ margin-bottom: 23px;
     border-top: 0.7px solid $outline-text-color;
     
     &--file1, &--file2, &--file3, &--file4, &--file5, &--file6, &--file7, &--file8, &--file9{
-            border-top: 0.7px solid $outline-text-color;
-            width: 870,74px;
-            height: 58px;
-            display: flex;
-            align-items: center;
-            font-size: 15px;
-            flex-direction: row;
+            @include grid-files();
                 &--number{
                     width: 83px;
                     height: 20px;
@@ -383,9 +278,7 @@ margin-bottom: 23px;
                 &--estado{
                     width: 106px;
                     height: 20px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flex-center();
                     border-radius: 10px;
                     margin-right: 39px;
                     color: $secondary-text-color;
@@ -410,23 +303,14 @@ margin-bottom: 23px;
         }
 }
 
+.mobile__export{
+    display: none
+}
+
 // FIN GRID
 
 //---------------------------------------------------------//
 
-@media (max-width: 768px) {
-    .grid{
-        background-color: blue;
-    }
-    .grid__categories{
-        background-color: rgb(199, 19, 19);
-    }
-}
-@media (max-width: 320px) {
-    .grid{
-        background-color: rgba(255, 0, 0, 0.89);
-    }
-    .container{
-        background-color: blue;
-    }
-}
+
+@import './mobile';
+@import './_tablet'
